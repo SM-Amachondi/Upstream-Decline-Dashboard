@@ -1,9 +1,0 @@
-field_id,field_name,operator,start_year,lat,lon,basin,water_depth_m,notes
-BONGA,Bonga,Shell Nigeria Exploration & Production (SNEPCo),2005,4.65,3.5,Niger Delta (Deepwater),1000,FPSO; offshore deepwater
-AGBAMI,Agbami,Chevron Nigeria Limited,2008,4.0,3.2,Niger Delta (Deepwater),1500,FPSO; major deepwater field
-AKPO,Akpo,TotalEnergies (TEPNG),2009,4.65,5.0,Niger Delta (Deepwater),1400,Condensate field; FPSO
-EGINA,Egina,TotalEnergies (TEPNG),2018,4.35,5.25,Niger Delta (Ultra-deep),1600,Came onstream 2018; FPSO
-ERHA,Erha,ExxonMobil (MPN),2006,5.05,6.0,Niger Delta (Deepwater),1200,Erha & Erha North; FPSO
-USAN,Usan,ExxonMobil/TotalEnergies (legacy),2012,4.45,6.25,Niger Delta (Deepwater),850,FPSO; brownfield
-AGBARA,Agbara,NNPC Upstream JV,2011,4.9,6.5,Niger Delta (Shallow shelf),120,Synthetic demo field
-ZEFA,Zefa,NNPC Upstream JV,2013,5.4,5.8,Niger Delta (Onshore deltaic),50,Synthetic demo field
