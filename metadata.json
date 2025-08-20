@@ -1,0 +1,16 @@
+{
+  "title": "Nigeria Upstream: Field Production & Decline Analytics",
+  "subtitle": "Interactive decline curves, forecasts, and operator insights",
+  "units": "barrels per day (bpd)",
+  "created_with": "Sophia Insights & Analytics",
+  "version": "1.0.0",
+  "last_updated": "2025-08-14 09:02 UTC",
+  "theme_colors": {
+    "primary": "#0B4F6C",
+    "accent": "#FFB703",
+    "danger": "#E63946",
+    "success": "#2A9D8F",
+    "bg_dark": "#051923",
+    "bg_card": "#0f2a3a"
+  }
+}
