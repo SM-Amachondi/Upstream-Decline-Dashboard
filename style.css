@@ -1,0 +1,52 @@
+/* Bright & glossy theme */
+:root{
+  --bg:#0b1526;
+  --card:#0f1f3b;
+  --accent1:#00e3ff;
+  --accent2:#ff4d8d;
+  --accent3:#ffc341;
+  --text:#eaf2ff;
+  --muted:#b8c3d9;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background: radial-gradient(1200px 800px at 20% -10%, #1f2f57 0%, #0b1526 50%, #07101d 100%);
+  color:var(--text);
+}
+header.app-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 22px;border-bottom:1px solid #1e2d4f;background:linear-gradient(180deg, #132446, #0e1b33);
+  position:sticky;top:0;z-index:5;
+}
+.brand{display:flex;gap:14px;align-items:center}
+.brand img{height:54px;width:54px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.titles h1{margin:0;font-size:22px;letter-spacing:.3px}
+.titles p{margin:2px 0 0;color:var(--muted);font-size:12px}
+
+.controls{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap}
+.controls label{display:flex;flex-direction:column;font-size:12px;color:var(--muted)}
+.controls select{min-width:160px;padding:8px 10px;border-radius:10px;border:1px solid #24365f;background:#0a1730;color:var(--text);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.controls button{padding:10px 14px;border-radius:12px;border:0;background:linear-gradient(135deg,var(--accent1),#17a7ff);color:#00102a;font-weight:700;box-shadow:0 8px 20px rgba(0,227,255,.28);cursor:pointer}
+
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:18px 22px}
+.kpi{background:linear-gradient(135deg,rgba(0,227,255,.12),rgba(255,77,141,.12));border:1px solid #2b3c66;border-radius:16px;padding:14px 16px;box-shadow:inset 0 0 40px rgba(255,255,255,.04), 0 10px 30px rgba(0,0,0,.35)}
+.kpi-label{font-size:12px;color:var(--muted)}
+.kpi-value{font-size:28px;font-weight:800;letter-spacing:.3px;margin-top:6px}
+.kpi-foot{font-size:11px;color:var(--muted);margin-top:6px}
+
+main{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;padding:0 22px 24px}
+.panel{background:linear-gradient(180deg,#0f1f3b,#0c1830);border:1px solid #24365f;border-radius:16px;padding:14px 14px 6px;box-shadow:0 16px 40px rgba(0,0,0,.35)}
+.panel h2{margin:6px 8px 8px;font-size:16px;color:#dbe6ff}
+#bar-top,#ts,#price{height:360px}
+#map{height:520px;border-radius:12px;overflow:hidden}
+.legend{margin-top:6px;font-size:12px;color:var(--muted)}
+
+footer{padding:12px 22px;color:var(--muted);border-top:1px solid #1e2d4f}
+
+@media (max-width:1100px){
+  main{grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr}
+  .controls select{min-width:140px}
+}

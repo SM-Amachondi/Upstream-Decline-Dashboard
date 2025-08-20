@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sophia Insights & Analytics — Global Oil & Gas Production</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="images/logo.png"/>
+  <!-- Plotly & Leaflet & PapaParse -->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <img src="images/logo.png" alt="Sophia Insights & Analytics logo"/>
+      <div class="titles">
+        <h1>Global Oil &amp; Gas Production Analytics</h1>
+        <p>Real data: Our World in Data (Energy Institute), EIA</p>
+      </div>
+    </div>
+    <div class="controls">
+      <label>
+        Metric
+        <select id="metric">
+          <option value="production">Production (TWh)</option>
+          <option value="consumption">Consumption (TWh)</option>
+          <option value="reserves">Proved Reserves (tonnes)</option>
+        </select>
+      </label>
+      <label>
+        Year
+        <select id="year"></select>
+      </label>
+      <label>
+        Countries
+        <select id="countries" multiple size="6"></select>
+      </label>
+      <button id="reset">Reset</button>
+    </div>
+  </header>
+
+  <section class="kpis">
+    <div class="kpi" id="kpi-world-total">
+      <div class="kpi-label">World Total Production (latest)</div>
+      <div class="kpi-value" id="kpi-world-value">–</div>
+      <div class="kpi-foot">TWh — EI Statistical Review via OWID</div>
+    </div>
+    <div class="kpi" id="kpi-top-country">
+      <div class="kpi-label">Top Producer (latest)</div>
+      <div class="kpi-value" id="kpi-top-name">–</div>
+      <div class="kpi-foot" id="kpi-top-value">–</div>
+    </div>
+    <div class="kpi" id="kpi-price">
+      <div class="kpi-label">Crude price (USD/m³, latest)</div>
+      <div class="kpi-value" id="kpi-price-value">–</div>
+      <div class="kpi-foot">S&P Global Platts via OWID</div>
+    </div>
+  </section>
+
+  <main>
+    <div class="panel">
+      <h2>Top 10 producers — <span id="panel-year"></span></h2>
+      <div id="bar-top"></div>
+    </div>
+    <div class="panel">
+      <h2>Time series — selected countries</h2>
+      <div id="ts"></div>
+    </div>
+    <div class="panel">
+      <h2>World map — choropleth</h2>
+      <div id="map"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="panel">
+      <h2>Crude oil price (since 1980)</h2>
+      <div id="price"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© Sophia Insights &amp; Analytics. Data from <a href="https://ourworldindata.org/energy" target="_blank">Our World in Data</a> based on the Energy Institute Statistical Review (2025). Crude price: EI based on S&P Global Platts. This page fetches live CSVs from OWID; no setup needed.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
